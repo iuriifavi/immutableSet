@@ -1,3 +1,5 @@
+'use strict';
+
 function ImmutableSet(value, has) {
 	if (value) {
 		if (has)
@@ -18,6 +20,5 @@ function ExplicitSet(value, has) {
 	this.remove = ImmutableSet.remove;
 }
 
-let set = new ImmutableSet().add(9).add(10).add(11).remove(10);
-
-console.log([5, 9, 10, 11, 12].map(x => x + '=' + set.has(x)).join(', '));
+exports.ImmutableSet = ImmutableSet;
+exports.ExplicitSet = ExplicitSet;
